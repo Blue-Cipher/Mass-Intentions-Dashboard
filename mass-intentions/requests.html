@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark" data-layout="fluid" data-sidebar-theme="dark" data-sidebar-position="left" data-sidebar-behavior="sticky">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Mass Intentions Admin Dashboard">
+	<meta name="author" content="Ubuni Creatives">
+
+	<title>Mass Intentions Admin Dashboard | Conventual Franciscan Friars </title>
+
+	<link rel="canonical" href="../administration/dashboard.html" />
+	<link rel="shortcut icon" href="#">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+	<link href="../assets/css/app.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class='sidebar-brand' href='../administration/dashboard.html'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="794" height="247">
+                        <rect width="100%" height="100%" fill="white"/>
+                        <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAxoAAAD3CAYAAACaciKTAAAAAXNSR0IArs4c6QAAD4tJREFUeF7t1zERAAAIAzHq3zQmfgwCOuRYfucIECBAgAABAgQIECAQCyzeM0eAAAECBAgQIECAAIETGp6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXOABE0oA+JGYhyUAAAAASUVORK5CYII=" x="0" y="0" width="794" height="247"/>
+                    </svg>
+    
+          <span class="align-middle me-3">Kenya Friars</span>
+        </a>
+
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Administration
+					</li>
+
+					<li class="sidebar-item">
+						<a  class="sidebar-link" href="../administration/dashboard.html">
+							<i class="align-middle" data-lucide="panels-top-left"></i> <span class="align-middle">Dashboard</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a  class="sidebar-link" href="../administration/analytics.html">
+							<i class="align-middle" data-lucide="atom"></i> <span class="align-middle">Analytics</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="../administration/users.html">
+							<i class="align-middle" data-lucide="user"></i> <span class="align-middle">Users</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="../administration/users.html">
+							<i class="align-middle" data-lucide="file"></i> <span class="align-middle">File Manager</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-header">
+						Mass Intentions
+					</li>
+					<li class="sidebar-item active">
+						<a class="sidebar-link collapsed" href="../mass-intentions/requests.html">
+              <i class="align-middle" data-lucide="hand-helping"></i> <span class="align-middle">Requests</span>
+			  <span class="badge badge-sidebar-primary">6</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed" href="../mass-intentions/calender.html">
+              <i class="align-middle" data-lucide="calendar-days"></i> <span class="align-middle">Calender</span>
+            </a>
+					</li>
+				
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed" href="../mass-intentions/tasks.html">
+              <i class="align-middle" data-lucide="trello"></i> <span class="align-middle">Tasks</span>
+			  <span class="badge badge-sidebar-primary">New</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Communications
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="../communications/email-inbox.html">
+							<i class="align-middle" data-lucide="mail"></i> <span class="align-middle">Email</span>
+							<span class="badge badge-sidebar-primary">New</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class='sidebar-link' href='../communications/messages.html'>
+              <i class="align-middle" data-lucide="message-square"></i> <span class="align-middle">Messages</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class='sidebar-link' href='../communications/notifications.html'>
+              <i class="align-middle" data-lucide="bell"></i> <span class="align-middle">Notifications</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Tools
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-stack"></i> <span class="align-middle">Reports</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="users"></i> <span class="align-middle">User Logs</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class='sidebar-link' href='landing.html' target='_blank'>
+              <i class="align-middle" data-lucide="map-pin"></i> <span class="align-middle">Locations</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-up"></i> <span class="align-middle">Import</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-down"></i> <span class="align-middle">Export</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Settings & Privacy
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="user-cog"></i> <span class="align-middle">Profile Settings</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="bell-plus"></i> <span class="align-middle">Web Notifications</span>
+            </a>
+					</li>
+			
+				</ul>
+
+				<div class="sidebar-cta">
+					<div class="sidebar-cta-content">
+						<strong class="d-inline-block mb-2">Monthly Report</strong>
+						<div class="mb-3 text-sm">
+							Your monthly report is ready for download!
+						</div>
+
+						<div class="d-grid">
+							<a href="#" class="btn btn-primary" target="_blank">Download</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-bg">
+				<a class="sidebar-toggle">
+          <i class="hamburger align-self-center"></i>
+        </a>
+
+				<form class="d-none d-sm-inline-block">
+					<div class="input-group input-group-navbar">
+						<input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+						<button class="btn" type="button">
+						<i class="align-middle" data-lucide="search"></i>
+						</button>
+					</div>
+				</form>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle text-body" data-lucide="message-circle"></i>
+									<span class="indicator">1</span>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
+								<div class="dropdown-menu-header">
+									<div class="position-relative">
+										1 New Message
+									</div>
+								</div>
+								<div class="list-group">
+									
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<img src="../assets/img/avatars/admin.jpg" class="img-fluid rounded-circle" alt="Fr. Raymond" width="40" height="40">
+											</div>
+											<div class="col-10 ps-2">
+												<div>Fr. Raymond</div>
+												<div class="text-muted small mt-1">Peace be upon you. Please share the mass schedule with Fr. Thadeus</div>
+												<div class="text-muted small mt-1">15m ago</div>
+											</div>
+										</div>
+									</a>
+
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="../communications/messages.html" class="text-muted">Show all messages</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle text-body" data-lucide="bell-off"></i>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+								<div class="dropdown-menu-header">
+									0 New Notifications
+								</div>
+								<div class="list-group">
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-danger" data-lucide="alert-circle"></i>
+											</div>
+											<div class="col-10">
+												<div>Example Notification</div>
+												<div class="text-muted small mt-1">Fr Ray exported users back-up file</div>
+												<div class="text-muted small mt-1">2h ago</div>
+											</div>
+										</div>
+									</a>
+									
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Show all notifications</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item nav-theme-toggle dropdown">
+							<a class="nav-icon js-theme-toggle" href="#">
+								<div class="position-relative">
+									<i class="align-middle text-body nav-theme-toggle-light" data-lucide="sun"></i>
+									<i class="align-middle text-body nav-theme-toggle-dark" data-lucide="moon"></i>
+								</div>
+							</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                                <i class="align-middle" data-lucide="settings"></i>
+                            </a>
+
+							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                                <img src="../assets/img/avatars/admin.jpg" class="img-fluid rounded-circle me-1 mt-n2 mb-n2" alt="Chris Wood" width="40" height="40"/> <span>Hillary Raduk</span>
+                            </a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class='dropdown-item' href='pages-profile.html'><i class="align-middle me-1" data-lucide="user"></i> Profile</a>
+								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-lucide="pie-chart"></i> Analytics</a>
+								<div class="dropdown-divider"></div>
+								<a class='dropdown-item' href='pages-settings.html'>Settings & Privacy</a>
+								<a class="dropdown-item" href="#">Help</a>
+								<a class="dropdown-item" href="#">Sign out</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<div class="row mb-2 mb-xl-3">
+						<div class="col-auto d-none d-sm-block">
+							<h3>Mass Intention Requests</h3>
+						</div>
+
+						<div class="col-auto ms-auto text-end mt-n1">
+
+							<div class="dropdown me-2 d-inline-block position-relative">
+								<form class="d-none d-sm-inline-block">
+									<div class="input-group input-group-navbar">
+										<input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+										<button class="btn" type="button">
+										<i class="align-middle" data-lucide="search"></i>
+										</button>
+									</div>
+								</form>
+							</div>
+
+							<button class="btn btn-success shadow-sm me-2" data-bs-toggle="modal" data-bs-target="#massModal">
+								Book Mass
+							</button>
+
+							<button class="btn btn-light bg-white shadow-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sort By
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Newest</a></li>
+                                <li><a class="dropdown-item" href="#">Oldest</a></li>
+                            </ul>
+							<button class="btn btn-primary shadow-sm">
+						<i class="align-middle" data-lucide="refresh-cw">&nbsp;</i>
+						</button>
+						</div>
+					</div>
+					
+                    
+					<div class="card flex-fill">
+						<div class="card-header">
+							<div class="card-actions float-end">
+                                <div class="dropdown position-relative">
+                                    <a href="#" data-bs-toggle="dropdown" data-bs-display="static">
+                                        <i class="align-middle" data-lucide="more-horizontal"></i>
+                                    </a>
+                            
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <ul class="list-unstyled">
+                                            <li class="dropdown-item disabled">Rows Per Page</li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <a class="dropdown-item">0-20</a>
+                                            <a class="dropdown-item">0-50</a>
+                                            <a class="dropdown-item">0-100</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+							<div class="card-header d-flex align-items-center">
+								<h5 class="card-title mb-0 me-2">Bulk Actions</h5>
+								<div class="card-actions">
+									<div class="dropdown position-relative">
+										<a href="#" data-bs-toggle="dropdown" data-bs-display="static">
+											<i class="align-middle" data-lucide="more-horizontal"></i>
+										</a>
+										<div class="dropdown-menu dropdown-menu-end">
+                                            <ul class="list-unstyled mb-0">
+                                                <li>
+                                                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#" id="bulk-select">
+                                                        Select All
+                                                        <i data-lucide="check-square" class="ms-2"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#" id="bulk-assign">
+                                                        Assign
+                                                        <i data-lucide="user-plus" class="ms-2"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#" id="bulk-export">
+                                                        Export
+                                                        <i data-lucide="download" class="ms-2"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger d-flex justify-content-between align-items-center" href="#" id="bulk-delete">
+                                                        Delete
+                                                        <i data-lucide="trash-2" class="ms-2"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+									</div>
+								</div>
+							</div>
+							
+						<table class="table-responsive-lg table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox" class="form-check-input" id="checkAll" required="">
+                                    </th>
+                                    <th data-sort="name">Name</th>
+                                    <th data-sort="phone">Phone</th>
+                                    <th data-sort="date">Appointment Date</th>
+                                    <th data-sort="registeredBy">Request Category</th>
+                                    <th data-sort="county">Donation Amount</th>
+                                    <th data-sort="email">Email</th>
+                                    <th class="text-end">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>
+                                        <div class="checkbox me-0 align-self-center">
+                                            <div class="custom-control custom-checkbox ">
+                                                <input type="checkbox" class="form-check-input" id="check12" required="">
+                                                <label class="custom-control-label" for="check12"></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="trans-list">
+                                            <img src="./images/trans/6.jpg" alt="" class="avatar me-3">
+                                            <p>Kiongozi Johnte</p>
+                                        </div>
+                                    </td>
+                                    <td><span class="text-primary font-w600">+254727937638</span></td>
+                                    <td>
+                                        <div class="date">September 25, 2024</div>
+                                    </td>
+                                    <td><h6 class="mb-0">Spiritual Intention</h6></td>
+                                    <td><h6 class="mb-0">Kirinyaga</h6></td>
+                                    <td><span class="text-primary font-w600">hillaryraduka@gmail.com</span></td>
+                                    <td>
+                                        <button class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#profileModal">
+											View
+										</button>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>
+                                        <div class="checkbox me-0 align-self-center">
+                                            <div class="custom-control custom-checkbox ">
+                                                <input type="checkbox" class="form-check-input" id="check12" required="">
+                                                <label class="custom-control-label" for="check12"></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="trans-list">
+                                            <img src="./images/trans/6.jpg" alt="" class="avatar me-3">
+                                            <p>Kiongozi Johnte</p>
+                                        </div>
+                                    </td>
+                                    <td><span class="text-primary font-w600">+254727937638</span></td>
+                                    <td>
+                                        <div class="date">September 25, 2024</div>
+                                    </td>
+                                    <td><h6 class="mb-0">Charitable Intentions</h6></td>
+                                    <td><h6 class="mb-0">Kirinyaga</h6></td>
+                                    <td><span class="text-primary font-w600">hillaryraduka@gmail.com</span></td>
+                                    <td>
+                                        <button class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#profileModal">
+											View
+										</button>
+                                    </td>
+                                </tr>
+                                
+                                <tr></tr>
+                                    <td>
+                                        <div class="checkbox me-0 align-self-center">
+                                            <div class="custom-control custom-checkbox ">
+                                                <input type="checkbox" class="form-check-input" id="check12" required="">
+                                                <label class="custom-control-label" for="check12"></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="trans-list">
+                                            <img src="./images/trans/6.jpg" alt="" class="avatar me-3">
+                                            <p>Kiongozi Johnte</p>
+                                        </div>
+                                    </td>
+                                    <td><span class="text-primary font-w600">+254727937638</span></td>
+                                    <td>
+                                        <div class="date">September 25, 2024</div>
+                                    </td>
+                                    <td><h6 class="mb-0">Community Support</h6></td>
+                                    <td><h6 class="mb-0">Kirinyaga</h6></td>
+                                    <td><span class="text-primary font-w600">hillaryraduka@gmail.com</span></td>
+                                    <td>
+                                        <button class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#profileModal">
+											View
+										</button>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table> 
+					</div>
+
+					<div class="modal fade" id="massModal" tabindex="-1" aria-labelledby="massModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="massModalLabel">Mass Booking Form</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<!-- Full Name -->
+										<div class="mb-3">
+											<label for="firstName" class="form-label">Full Name</label>
+											<input type="text" class="form-control" id="firstName" required>
+										</div>
+				
+										<!-- Preferred Contact Method -->
+										<div class="mb-3">
+											<label class="form-label">Preferred Contact Method</label>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="emailCheckbox" onclick="toggleContactFields()">
+												<label class="form-check-label" for="emailCheckbox">Email</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="phoneCheckbox" onclick="toggleContactFields()">
+												<label class="form-check-label" for="phoneCheckbox">Phone</label>
+											</div>
+										</div>
+				
+										<!-- Email Input Field -->
+										<div class="mb-3 d-none" id="emailField">
+											<label for="email" class="form-label">Email</label>
+											<input type="email" class="form-control" id="email">
+										</div>
+				
+										<!-- Phone Input Field -->
+										<div class="mb-3 d-none" id="phoneField">
+											<label for="phone" class="form-label">Phone</label>
+											<input type="text" class="form-control" id="phone">
+										</div>
+				
+										<!-- Country -->
+										<div class="mb-3">
+											<label for="country" class="form-label">Country</label>
+											<input type="text" class="form-control" id="country" required>
+										</div>
+				
+										<!-- Type of Mass Intention -->
+										<div class="mb-3">
+											<label class="form-label">Type of Mass Intention</label>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="massType" id="individualMass" onclick="toggleMassIntentionFields()">
+												<label class="form-check-label" for="individualMass">Individual Mass Intention</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="massType" id="gregorianMass" onclick="toggleMassIntentionFields()">
+												<label class="form-check-label" for="gregorianMass">Gregorian Masses</label>
+											</div>
+										</div>
+				
+										<!-- Individual Mass Intention Fields -->
+										<div class="mb-3 d-none" id="individualMassFields">
+											<div class="mb-3">
+												<label for="numberOfMasses" class="form-label">Number of Masses</label>
+												<input type="number" class="form-control" id="numberOfMasses" value="1" min="1">
+											</div>
+											<div class="mb-3">
+												<label for="offering" class="form-label">Offering</label>
+												<input type="text" class="form-control" id="offering" value="10 USD" readonly>
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Living or Deceased</label>
+												<div class="form-check">
+													<input class="form-check-input" type="radio" name="livingOrDeceased" id="living">
+													<label class="form-check-label" for="living">Living</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="radio" name="livingOrDeceased" id="deceased">
+													<label class="form-check-label" for="deceased">Deceased</label>
+												</div>
+											</div>
+											<div class="mb-3">
+												<label for="intentionName" class="form-label">Name/Intention</label>
+												<textarea class="form-control" id="intentionName" rows="3"></textarea>
+											</div>
+											<div class="mb-3">
+												<label for="additionalOffering" class="form-label">Additional Offering</label>
+												<input type="number" class="form-control" id="additionalOffering" min="0">
+											</div>
+										</div>
+				
+										<!-- Gregorian Masses Fields -->
+										<div class="mb-3 d-none" id="gregorianMassFields">
+											<div class="mb-3">
+												<label for="numberOfMassesGregorian" class="form-label">Number of Masses</label>
+												<input type="text" class="form-control" id="numberOfMassesGregorian" value="30" readonly>
+											</div>
+											<div class="mb-3">
+												<label for="offeringGregorian" class="form-label">Offering</label>
+												<input type="text" class="form-control" id="offeringGregorian" value="300 USD" readonly>
+											</div>
+											<div class="mb-3">
+												<label for="reposeSoul" class="form-label">For the repose of the soul of:</label>
+												<textarea class="form-control" id="reposeSoul" rows="3"></textarea>
+											</div>
+											<div class="mb-3">
+												<label for="additionalOffering" class="form-label">Additional Offering</label>
+												<input type="number" class="form-control" id="additionalOffering" min="0">
+											</div>
+										</div>
+				
+										<!-- Submit Button -->
+										<button type="submit" class="btn btn-primary w-100">Submit Request</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="profileModalLabel">Request Information</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<div class="container">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="mb-3">
+													<h6 class="fw-bold">Full Name:</h6>
+													<p id="profileFullName" class="border rounded p-2"></p>
+												</div>
+												<div class="mb-3">
+													<h6 class="fw-bold">Email:</h6>
+													<p id="profileEmail" class="border rounded p-2"></p>
+												</div>
+												<div class="mb-3">
+													<h6 class="fw-bold">Phone:</h6>
+													<p id="profilePhone" class="border rounded p-2"></p>
+												</div>
+												<div class="mb-3">
+													<h6 class="fw-bold">Country:</h6>
+													<p id="profileCountry" class="border rounded p-2"></p>
+												</div>
+												<div class="mb-3">
+													<h6 class="fw-bold">Preferred Contact Method:</h6>
+													<p id="profileContactMethod" class="border rounded p-2"></p>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="mb-3">
+													<h6 class="fw-bold">Type of Mass Intention:</h6>
+													<p id="profileMassType" class="border rounded p-2"></p>
+												</div>
+												<div class="mb-3">
+													<h6 class="fw-bold">Number of Masses:</h6>
+													<p id="profileNumberOfMasses" class="border rounded p-2"></p>
+												</div>
+												<div class="mb-3">
+													<h6 class="fw-bold">Offering:</h6>
+													<p id="profileOffering" class="border rounded p-2"></p>
+												</div>
+												<div class="mb-3">
+													<h6 class="fw-bold">Living or Deceased:</h6>
+													<p id="profileLivingOrDeceased" class="border rounded p-2"></p>
+												</div>
+												<div class="mb-3">
+													<h6 class="fw-bold">Name/Intention:</h6>
+													<p id="profileIntentionName" class="border rounded p-2"></p>
+												</div>
+												<div class="mb-3">
+													<h6 class="fw-bold">Additional Offering:</h6>
+													<p id="profileAdditionalOffering" class="border rounded p-2"></p>
+												</div>
+												<div class="mb-3">
+													<h6 class="fw-bold">For the repose of the soul of:</h6>
+													<p id="profileReposeSoul" class="border rounded p-2"></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Support</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Help Center</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Privacy</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Terms of Service</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-6 text-end">
+							<p class="mb-0">
+								&copy; 2024 - <a class='text-muted' href='https://kenyafriars.org/'>Conventual Franciscan Friars</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="../assets/js/app.js"></script>
+
+	  <!-- Bootstrap JS and dependencies -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+	  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+	  <!-- JavaScript functions to toggle fields and handle modals -->
+	  <script>
+		  function toggleContactFields() {
+			  const emailField = document.getElementById('emailField');
+			  const phoneField = document.getElementById('phoneField');
+			  emailField.classList.toggle('d-none', !document.getElementById('emailCheckbox').checked);
+			  phoneField.classList.toggle('d-none', !document.getElementById('phoneCheckbox').checked);
+		  }
+  
+		  function toggleMassIntentionFields() {
+			  const individualMassFields = document.getElementById('individualMassFields');
+			  const gregorianMassFields = document.getElementById('gregorianMassFields');
+			  individualMassFields.classList.toggle('d-none', !document.getElementById('individualMass').checked);
+			  gregorianMassFields.classList.toggle('d-none', !document.getElementById('gregorianMass').checked);
+		  }
+  
+		  function showProfileModal(event) {
+			  event.preventDefault(); // Prevent form submission
+			  
+			  // Get form data
+			  const form = document.getElementById('bookingForm');
+			  const fullName = document.getElementById('firstName').value;
+			  const email = document.getElementById('email').value;
+			  const phone = document.getElementById('phone').value;
+			  const country = document.getElementById('country').value;
+			  const massType = document.querySelector('input[name="massType"]:checked')?.nextElementSibling?.textContent || '';
+			  const numberOfMasses = document.getElementById('numberOfMasses').value || '';
+			  const offering = document.getElementById('offering').value || '';
+			  const livingOrDeceased = document.querySelector('input[name="livingOrDeceased"]:checked')?.nextElementSibling?.textContent || '';
+			  const intentionName = document.getElementById('intentionName').value || '';
+			  const additionalOffering = document.getElementById('additionalOffering').value || '';
+			  const reposeSoul = document.getElementById('reposeSoul').value || '';
+  
+			  // Populate profile modal with form data
+			  document.getElementById('profileFullName').textContent = fullName;
+			  document.getElementById('profileEmail').textContent = email;
+			  document.getElementById('profilePhone').textContent = phone;
+			  document.getElementById('profileCountry').textContent = country;
+			  document.getElementById('profileMassType').textContent = massType;
+			  document.getElementById('profileNumberOfMasses').textContent = numberOfMasses;
+			  document.getElementById('profileOffering').textContent = offering;
+			  document.getElementById('profileLivingOrDeceased').textContent = livingOrDeceased;
+			  document.getElementById('profileIntentionName').textContent = intentionName;
+			  document.getElementById('profileAdditionalOffering').textContent = additionalOffering;
+			  document.getElementById('profileReposeSoul').textContent = reposeSoul;
+  
+			  // Show profile modal
+			  const profileModal = new bootstrap.Modal(document.getElementById('profileModal'));
+			  profileModal.show();
+		  }
+	  </script>
+
+	 
+
+</body>
+
+
+</html>

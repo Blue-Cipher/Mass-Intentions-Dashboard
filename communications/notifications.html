@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark" data-layout="fluid" data-sidebar-theme="dark" data-sidebar-position="left" data-sidebar-behavior="sticky">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Mass Intentions Admin Dashboard">
+	<meta name="author" content="Ubuni Creatives">
+
+	<title>Mass Intentions Admin Dashboard | Conventual Franciscan Friars </title>
+
+	<link rel="canonical" href="../administration/dashboard.html" />
+	<link rel="shortcut icon" href="#">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+	<link href="../assets/css/app.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class='sidebar-brand' href='../administration/dashboard.html'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="794" height="247">
+                        <rect width="100%" height="100%" fill="white"/>
+                        <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAxoAAAD3CAYAAACaciKTAAAAAXNSR0IArs4c6QAAD4tJREFUeF7t1zERAAAIAzHq3zQmfgwCOuRYfucIECBAgAABAgQIECAQCyzeM0eAAAECBAgQIECAAIETGp6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXOABE0oA+JGYhyUAAAAASUVORK5CYII=" x="0" y="0" width="794" height="247"/>
+                    </svg>
+    
+          <span class="align-middle me-3">Kenya Friars</span>
+        </a>
+
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Administration
+					</li>
+
+					<li class="sidebar-item">
+						<a  class="sidebar-link" href="../administration/dashboard.html">
+							<i class="align-middle" data-lucide="panels-top-left"></i> <span class="align-middle">Dashboard</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a  class="sidebar-link" href="../administration/analytics.html">
+							<i class="align-middle" data-lucide="atom"></i> <span class="align-middle">Analytics</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="../administration/users.html">
+							<i class="align-middle" data-lucide="user"></i> <span class="align-middle">Users</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="../administration/users.html">
+							<i class="align-middle" data-lucide="file"></i> <span class="align-middle">File Manager</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-header">
+						Mass Intentions
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed" href="../mass-intentions/requests.html">
+              <i class="align-middle" data-lucide="hand-helping"></i> <span class="align-middle">Requests</span>
+			  <span class="badge badge-sidebar-primary">6</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed" href="../mass-intentions/calender.html">
+              <i class="align-middle" data-lucide="calendar-days"></i> <span class="align-middle">Calender</span>
+            </a>
+					</li>
+				
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed" href="../mass-intentions/tasks.html">
+              <i class="align-middle" data-lucide="trello"></i> <span class="align-middle">Tasks</span>
+			  <span class="badge badge-sidebar-primary">New</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Communications
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="../communications/email-inbox.html">
+							<i class="align-middle" data-lucide="mail"></i> <span class="align-middle">Email</span>
+							<span class="badge badge-sidebar-primary">New</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class='sidebar-link' href='../communications/messages.html'>
+              <i class="align-middle" data-lucide="message-square"></i> <span class="align-middle">Messages</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item active">
+						<a class='sidebar-link' href='../communications/notifications.html'>
+              <i class="align-middle" data-lucide="bell"></i> <span class="align-middle">Notifications</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Tools
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-stack"></i> <span class="align-middle">Reports</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="users"></i> <span class="align-middle">User Logs</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class='sidebar-link' href='landing.html' target='_blank'>
+              <i class="align-middle" data-lucide="map-pin"></i> <span class="align-middle">Locations</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-up"></i> <span class="align-middle">Import</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-down"></i> <span class="align-middle">Export</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Settings & Privacy
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="user-cog"></i> <span class="align-middle">Profile Settings</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="bell-plus"></i> <span class="align-middle">Web Notifications</span>
+            </a>
+					</li>
+			
+				</ul>
+
+				<div class="sidebar-cta">
+					<div class="sidebar-cta-content">
+						<strong class="d-inline-block mb-2">Monthly Report</strong>
+						<div class="mb-3 text-sm">
+							Your monthly report is ready for download!
+						</div>
+
+						<div class="d-grid">
+							<a href="#" class="btn btn-primary" target="_blank">Download</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-bg">
+				<a class="sidebar-toggle">
+          <i class="hamburger align-self-center"></i>
+        </a>
+
+				<form class="d-none d-sm-inline-block">
+					<div class="input-group input-group-navbar">
+						<input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+						<button class="btn" type="button">
+              <i class="align-middle" data-lucide="search"></i>
+            </button>
+					</div>
+				</form>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle text-body" data-lucide="message-circle"></i>
+									<span class="indicator">1</span>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
+								<div class="dropdown-menu-header">
+									<div class="position-relative">
+										1 New Message
+									</div>
+								</div>
+								<div class="list-group">
+									
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<img src="../assets/img/avatars/admin.jpg" class="img-fluid rounded-circle" alt="Fr. Raymond" width="40" height="40">
+											</div>
+											<div class="col-10 ps-2">
+												<div>Fr. Raymond</div>
+												<div class="text-muted small mt-1">Peace be upon you. Please share the mass schedule with Fr. Thadeus</div>
+												<div class="text-muted small mt-1">15m ago</div>
+											</div>
+										</div>
+									</a>
+
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="../communications/messages.html" class="text-muted">Show all messages</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle text-body" data-lucide="bell-off"></i>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+								<div class="dropdown-menu-header">
+									0 New Notifications
+								</div>
+								<div class="list-group">
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-danger" data-lucide="alert-circle"></i>
+											</div>
+											<div class="col-10">
+												<div>Example Notification</div>
+												<div class="text-muted small mt-1">Fr Ray exported users back-up file</div>
+												<div class="text-muted small mt-1">2h ago</div>
+											</div>
+										</div>
+									</a>
+									
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Show all notifications</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item nav-theme-toggle dropdown">
+							<a class="nav-icon js-theme-toggle" href="#">
+								<div class="position-relative">
+									<i class="align-middle text-body nav-theme-toggle-light" data-lucide="sun"></i>
+									<i class="align-middle text-body nav-theme-toggle-dark" data-lucide="moon"></i>
+								</div>
+							</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                <i class="align-middle" data-lucide="settings"></i>
+              </a>
+
+							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                <img src="../assets/img/avatars/admin.jpg" class="img-fluid rounded-circle me-1 mt-n2 mb-n2" alt="Chris Wood" width="40" height="40"/> <span>Hillary Raduk</span>
+              </a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class='dropdown-item' href='pages-profile.html'><i class="align-middle me-1" data-lucide="user"></i> Profile</a>
+								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-lucide="pie-chart"></i> Analytics</a>
+								<div class="dropdown-divider"></div>
+								<a class='dropdown-item' href='pages-settings.html'>Settings & Privacy</a>
+								<a class="dropdown-item" href="#">Help</a>
+								<a class="dropdown-item" href="#">Sign out</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">Notifications</h1>
+
+					<div class="card">
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title">Some notification Stuff</h5>
+                                    <h6 class="card-subtitle text-muted">Explanation on the notification stuff</h6>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <button type="button" class="btn btn-success shadow-sm me-2">Button if Needed</button>
+                                    <div class="dropdown position-relative">
+                                        <a href="#" data-bs-toggle="dropdown" data-bs-display="static">
+                                              <i class="align-middle" data-lucide="more-horizontal"></i>
+                                           </a>
+
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <a class="dropdown-item" href="#">Option</a>
+                                            <a class="dropdown-item" href="#">Another Option</a>
+                                            <a class="dropdown-item" href="#">Even More Options</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div></div>
+                        </div>
+                    </div>
+                    
+
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Support</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Help Center</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Privacy</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Terms of Service</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-6 text-end">
+							<p class="mb-0">
+								&copy; 2024 - <a class='text-muted' href='https://kenyafriars.org/'>Conventual Franciscan Friars</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="../assets/js/app.js"></script>
+
+	
+
+</body>
+
+
+</html>

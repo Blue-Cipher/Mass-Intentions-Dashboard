@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark" data-layout="fluid" data-sidebar-theme="dark" data-sidebar-position="left" data-sidebar-behavior="sticky">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Mass Intentions Admin Dashboard">
+	<meta name="author" content="Ubuni Creatives">
+
+	<title>Mass Intentions Admin Dashboard | Conventual Franciscan Friars </title>
+
+	<link rel="canonical" href="../administration/dashboard.html" />
+	<link rel="shortcut icon" href="#">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+	<link href="../assets/css/app.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class='sidebar-brand' href='../administration/dashboard.html'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="794" height="247">
+                        <rect width="100%" height="100%" fill="white"/>
+                        <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAxoAAAD3CAYAAACaciKTAAAAAXNSR0IArs4c6QAAD4tJREFUeF7t1zERAAAIAzHq3zQmfgwCOuRYfucIECBAgAABAgQIECAQCyzeM0eAAAECBAgQIECAAIETGp6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXOABE0oA+JGYhyUAAAAASUVORK5CYII=" x="0" y="0" width="794" height="247"/>
+                    </svg>
+    
+          <span class="align-middle me-3">Kenya Friars</span>
+        </a>
+
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Administration
+					</li>
+
+					<li class="sidebar-item">
+						<a  class="sidebar-link" href="../administration/dashboard.html">
+							<i class="align-middle" data-lucide="panels-top-left"></i> <span class="align-middle">Dashboard</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a  class="sidebar-link" href="../administration/analytics.html">
+							<i class="align-middle" data-lucide="atom"></i> <span class="align-middle">Analytics</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="../administration/users.html">
+							<i class="align-middle" data-lucide="user"></i> <span class="align-middle">Users</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="../administration/users.html">
+							<i class="align-middle" data-lucide="file"></i> <span class="align-middle">File Manager</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-header">
+						Mass Intentions
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed" href="../mass-intentions/requests.html">
+              <i class="align-middle" data-lucide="hand-helping"></i> <span class="align-middle">Requests</span>
+			  <span class="badge badge-sidebar-primary">6</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed" href="../mass-intentions/calender.html">
+              <i class="align-middle" data-lucide="calendar-days"></i> <span class="align-middle">Calender</span>
+            </a>
+					</li>
+				
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed" href="../mass-intentions/tasks.html">
+              <i class="align-middle" data-lucide="trello"></i> <span class="align-middle">Tasks</span>
+			  <span class="badge badge-sidebar-primary">New</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Communications
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="../communications/email-inbox.html">
+							<i class="align-middle" data-lucide="mail"></i> <span class="align-middle">Email</span>
+							<span class="badge badge-sidebar-primary">New</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item active">
+						<a class='sidebar-link' href='../communications/messages.html'>
+              <i class="align-middle" data-lucide="message-square"></i> <span class="align-middle">Messages</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class='sidebar-link' href='../communications/notifications.html'>
+              <i class="align-middle" data-lucide="bell"></i> <span class="align-middle">Notifications</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Tools
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-stack"></i> <span class="align-middle">Reports</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="users"></i> <span class="align-middle">User Logs</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class='sidebar-link' href='landing.html' target='_blank'>
+              <i class="align-middle" data-lucide="map-pin"></i> <span class="align-middle">Locations</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-up"></i> <span class="align-middle">Import</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-down"></i> <span class="align-middle">Export</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Settings & Privacy
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="user-cog"></i> <span class="align-middle">Profile Settings</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="bell-plus"></i> <span class="align-middle">Web Notifications</span>
+            </a>
+					</li>
+			
+				</ul>
+
+				<div class="sidebar-cta">
+					<div class="sidebar-cta-content">
+						<strong class="d-inline-block mb-2">Monthly Report</strong>
+						<div class="mb-3 text-sm">
+							Your monthly report is ready for download!
+						</div>
+
+						<div class="d-grid">
+							<a href="#" class="btn btn-primary" target="_blank">Download</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-bg">
+				<a class="sidebar-toggle">
+          <i class="hamburger align-self-center"></i>
+        </a>
+
+				<form class="d-none d-sm-inline-block">
+					<div class="input-group input-group-navbar">
+						<input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+						<button class="btn" type="button">
+              <i class="align-middle" data-lucide="search"></i>
+            </button>
+					</div>
+				</form>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle text-body" data-lucide="message-circle"></i>
+									<span class="indicator">1</span>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
+								<div class="dropdown-menu-header">
+									<div class="position-relative">
+										1 New Message
+									</div>
+								</div>
+								<div class="list-group">
+									
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<img src="../assets/img/avatars/admin.jpg" class="img-fluid rounded-circle" alt="Fr. Raymond" width="40" height="40">
+											</div>
+											<div class="col-10 ps-2">
+												<div>Fr. Raymond</div>
+												<div class="text-muted small mt-1">Peace be upon you. Please share the mass schedule with Fr. Thadeus</div>
+												<div class="text-muted small mt-1">15m ago</div>
+											</div>
+										</div>
+									</a>
+
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="../communications/messages.html" class="text-muted">Show all messages</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle text-body" data-lucide="bell-off"></i>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+								<div class="dropdown-menu-header">
+									0 New Notifications
+								</div>
+								<div class="list-group">
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-danger" data-lucide="alert-circle"></i>
+											</div>
+											<div class="col-10">
+												<div>Example Notification</div>
+												<div class="text-muted small mt-1">Fr Ray exported users back-up file</div>
+												<div class="text-muted small mt-1">2h ago</div>
+											</div>
+										</div>
+									</a>
+									
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Show all notifications</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item nav-theme-toggle dropdown">
+							<a class="nav-icon js-theme-toggle" href="#">
+								<div class="position-relative">
+									<i class="align-middle text-body nav-theme-toggle-light" data-lucide="sun"></i>
+									<i class="align-middle text-body nav-theme-toggle-dark" data-lucide="moon"></i>
+								</div>
+							</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                <i class="align-middle" data-lucide="settings"></i>
+              </a>
+
+							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                <img src="../assets/img/avatars/admin.jpg" class="img-fluid rounded-circle me-1 mt-n2 mb-n2" alt="Chris Wood" width="40" height="40"/> <span>Hillary Raduk</span>
+              </a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class='dropdown-item' href='pages-profile.html'><i class="align-middle me-1" data-lucide="user"></i> Profile</a>
+								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-lucide="pie-chart"></i> Analytics</a>
+								<div class="dropdown-divider"></div>
+								<a class='dropdown-item' href='pages-settings.html'>Settings & Privacy</a>
+								<a class="dropdown-item" href="#">Help</a>
+								<a class="dropdown-item" href="#">Sign out</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+            <main class="content">
+				<div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">Messages</h1>
+
+					<div class="card">
+						<div class="row g-0">
+							<div class="col-12 col-lg-5 col-xl-3 border-end list-group">
+
+								<div class="px-4 d-none d-md-block">
+									<div class="d-flex align-items-start align-items-center">
+										<div class="flex-grow-1">
+											<input type="text" class="form-control my-3" placeholder="Search...">
+										</div>
+									</div>
+								</div>
+
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="badge bg-success float-end">5</div>
+									<div class="d-flex align-items-start">
+										<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Ashley Briggs" width="40" height="40">
+										<div class="flex-grow-1 ms-3">
+											Ashley Briggs
+											<div class="small"><span class="fas fa-circle chat-online"></span> Online</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="badge bg-success float-end">2</div>
+									<div class="d-flex align-items-start">
+										<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Carl Jenkins" width="40" height="40">
+										<div class="flex-grow-1 ms-3">
+											Carl Jenkins
+											<div class="small"><span class="fas fa-circle chat-online"></span> Online</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="d-flex align-items-start">
+										<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Bertha Martin" width="40" height="40">
+										<div class="flex-grow-1 ms-3">
+											Bertha Martin
+											<div class="small"><span class="fas fa-circle chat-online"></span> Online</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="d-flex align-items-start">
+										<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Stacie Hall" width="40" height="40">
+										<div class="flex-grow-1 ms-3">
+											Stacie Hall
+											<div class="small"><span class="fas fa-circle chat-offline"></span> Offline</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="d-flex align-items-start">
+										<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Fiona Green" width="40" height="40">
+										<div class="flex-grow-1 ms-3">
+											Fiona Green
+											<div class="small"><span class="fas fa-circle chat-offline"></span> Offline</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="d-flex align-items-start">
+										<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Doris Wilder" width="40" height="40">
+										<div class="flex-grow-1 ms-3">
+											Doris Wilder
+											<div class="small"><span class="fas fa-circle chat-offline"></span> Offline</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="d-flex align-items-start">
+										<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Haley Kennedy" width="40" height="40">
+										<div class="flex-grow-1 ms-3">
+											Haley Kennedy
+											<div class="small"><span class="fas fa-circle chat-offline"></span> Offline</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="d-flex align-items-start">
+										<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Jennifer Chang" width="40" height="40">
+										<div class="flex-grow-1 ms-3">
+											Jennifer Chang
+											<div class="small"><span class="fas fa-circle chat-offline"></span> Offline</div>
+										</div>
+									</div>
+								</a>
+
+								<hr class="d-block d-lg-none mt-1 mb-0" />
+							</div>
+							<div class="col-12 col-lg-7 col-xl-9">
+								<div class="py-2 px-4 border-bottom d-none d-lg-block">
+									<div class="d-flex align-items-start align-items-center py-1">
+										<div class="position-relative">
+											<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Bertha Martin" width="40" height="40">
+										</div>
+										<div class="flex-grow-1 ps-3">
+											<strong>Bertha Martin</strong>
+											<div class="text-muted small"><em>Typing...</em></div>
+										</div>
+										<div class="dropdown">
+                                            <button class="btn btn-light border btn-lg px-3" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="lucide-lg" data-lucide="more-horizontal"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                                <li><span class="dropdown-item disabled">Chat Options</span></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                                    Clear 
+                                                    <i class="lucide" data-lucide="trash-2"></i>
+                                                </a></li>
+                                                <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                                    Export 
+                                                    <i class="lucide" data-lucide="file-text"></i>
+                                                </a></li>
+                                                <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                                    Mute 
+                                                    <i class="lucide" data-lucide="bell-off"></i>
+                                                </a></li>
+                                                <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                                    Favourites
+                                                    <i class="lucide" data-lucide="star"></i>
+                                                </a></li>
+                                            </ul>
+                                        </div>
+                                        
+                                        
+									</div>
+								</div>
+
+								<div class="position-relative">
+									<div class="chat-messages p-4">
+
+										<div class="chat-message-right pb-4">
+											<div>
+												<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Chris Wood" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:33 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-body-tertiary rounded py-2 px-3 me-3">
+												<div class="fw-bold mb-1">You</div>
+												Lorem ipsum dolor sit amet, vis erat denique in, dicunt prodesset te vix.
+											</div>
+										</div>
+
+										<div class="chat-message-left pb-4">
+											<div>
+												<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Bertha Martin" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:34 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-body-tertiary rounded py-2 px-3 ms-3">
+												<div class="fw-bold mb-1">Bertha Martin</div>
+												Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
+											</div>
+										</div>
+
+										<div class="chat-message-right pb-4">
+											<div>
+												<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Chris Wood" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:35 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-body-tertiary rounded py-2 px-3 me-3">
+												<div class="fw-bold mb-1">You</div>
+												Cum ea graeci tractatos.
+											</div>
+										</div>
+
+										<div class="chat-message-left pb-4">
+											<div>
+												<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Bertha Martin" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:36 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-body-tertiary rounded py-2 px-3 ms-3">
+												<div class="fw-bold mb-1">Bertha Martin</div>
+												Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit. Proin ultricies placerat imperdiet. Morbi varius
+												quam ac venenatis tempus.
+											</div>
+										</div>
+
+										<div class="chat-message-left pb-4">
+											<div>
+												<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Bertha Martin" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:37 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-body-tertiary rounded py-2 px-3 ms-3">
+												<div class="fw-bold mb-1">Bertha Martin</div>
+												Cras pulvinar, sapien id vehicula aliquet, diam velit elementum orci.
+											</div>
+										</div>
+
+										<div class="chat-message-right pb-4">
+											<div>
+												<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Chris Wood" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:38 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-body-tertiary rounded py-2 px-3 me-3">
+												<div class="fw-bold mb-1">You</div>
+												Lorem ipsum dolor sit amet, vis erat denique in, dicunt prodesset te vix.
+											</div>
+										</div>
+
+										<div class="chat-message-left pb-4">
+											<div>
+												<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Bertha Martin" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:39 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-body-tertiary rounded py-2 px-3 ms-3">
+												<div class="fw-bold mb-1">Bertha Martin</div>
+												Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
+											</div>
+										</div>
+
+										<div class="chat-message-right pb-4">
+											<div>
+												<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Chris Wood" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:40 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-body-tertiary rounded py-2 px-3 me-3">
+												<div class="fw-bold mb-1">You</div>
+												Cum ea graeci tractatos.
+											</div>
+										</div>
+
+										<div class="chat-message-right pb-4">
+											<div>
+												<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Chris Wood" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:41 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-body-tertiary rounded py-2 px-3 me-3">
+												<div class="fw-bold mb-1">You</div>
+												Morbi finibus, lorem id placerat ullamcorper, nunc enim ultrices massa, id dignissim metus urna eget purus.
+											</div>
+										</div>
+
+										<div class="chat-message-left pb-4">
+											<div>
+												<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Bertha Martin" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:42 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-body-tertiary rounded py-2 px-3 ms-3">
+												<div class="fw-bold mb-1">Bertha Martin</div>
+												Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit. Proin ultricies placerat imperdiet. Morbi varius
+												quam ac venenatis tempus.
+											</div>
+										</div>
+
+										<div class="chat-message-right pb-4">
+											<div>
+												<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Chris Wood" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:43 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-body-tertiary rounded py-2 px-3 me-3">
+												<div class="fw-bold mb-1">You</div>
+												Lorem ipsum dolor sit amet, vis erat denique in, dicunt prodesset te vix.
+											</div>
+										</div>
+
+										<div class="chat-message-left pb-4">
+											<div>
+												<img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Bertha Martin" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:44 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-body-tertiary rounded py-2 px-3 ms-3">
+												<div class="fw-bold mb-1">Bertha Martin</div>
+												Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="flex-grow-0 py-3 px-4 border-top">
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="Type your message">
+										<button class="btn btn-primary">Send</button>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Support</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Help Center</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Privacy</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Terms of Service</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-6 text-end">
+							<p class="mb-0">
+								&copy; 2024 - <a class='text-muted' href='https://kenyafriars.org/'>Conventual Franciscan Friars</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="../assets/js/app.js"></script>
+
+    <script>
+		// Chat
+		document.addEventListener("DOMContentLoaded", function() {
+			$('.chat-messages').scrollTop($('.chat-messages')[0].scrollHeight);
+		});
+	</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark" data-layout="fluid" data-sidebar-theme="dark" data-sidebar-position="left" data-sidebar-behavior="sticky">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Mass Intentions Admin Dashboard">
+	<meta name="author" content="Ubuni Creatives">
+
+	<title>Mass Intentions Admin Dashboard | File Manager </title>
+
+	<link rel="canonical" href="dashboard.html" />
+	<link rel="shortcut icon" href="#">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+	<link href="../assets/css/app.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class='sidebar-brand' href='dashboard.html'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="794" height="247">
+                        <rect width="100%" height="100%" fill="white"/>
+                        <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAxoAAAD3CAYAAACaciKTAAAAAXNSR0IArs4c6QAAD4tJREFUeF7t1zERAAAIAzHq3zQmfgwCOuRYfucIECBAgAABAgQIECAQCyzeM0eAAAECBAgQIECAAIETGp6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXOABE0oA+JGYhyUAAAAASUVORK5CYII=" x="0" y="0" width="794" height="247"/>
+                    </svg>
+    
+          <span class="align-middle me-3">Kenya Friars</span>
+        </a>
+
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Administration
+					</li>
+
+					<li class="sidebar-item">
+						<a  class="sidebar-link" href="../administration/dashboard.html">
+							<i class="align-middle" data-lucide="panels-top-left"></i> <span class="align-middle">Dashboard</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a  class="sidebar-link" href="../administration/analytics.html">
+							<i class="align-middle" data-lucide="atom"></i> <span class="align-middle">Analytics</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="../administration/users.html">
+							<i class="align-middle" data-lucide="user"></i> <span class="align-middle">Users</span>
+						</a>
+					</li>
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="../administration/users.html">
+							<i class="align-middle" data-lucide="file"></i> <span class="align-middle">File Manager</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-header">
+						Mass Intentions
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed" href="../mass-intentions/requests.html">
+              <i class="align-middle" data-lucide="hand-helping"></i> <span class="align-middle">Requests</span>
+			  <span class="badge badge-sidebar-primary">6</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed" href="../mass-intentions/calender.html">
+              <i class="align-middle" data-lucide="calendar-days"></i> <span class="align-middle">Calender</span>
+            </a>
+					</li>
+				
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed" href="../mass-intentions/tasks.html">
+              <i class="align-middle" data-lucide="trello"></i> <span class="align-middle">Tasks</span>
+			  <span class="badge badge-sidebar-primary">New</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Communications
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="../communications/email-inbox.html">
+							<i class="align-middle" data-lucide="mail"></i> <span class="align-middle">Email</span>
+							<span class="badge badge-sidebar-primary">New</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class='sidebar-link' href='../communications/messages.html'>
+              <i class="align-middle" data-lucide="message-square"></i> <span class="align-middle">Messages</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class='sidebar-link' href='../communications/notifications.html'>
+              <i class="align-middle" data-lucide="bell"></i> <span class="align-middle">Notifications</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Tools
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-stack"></i> <span class="align-middle">Reports</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="users"></i> <span class="align-middle">User Logs</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class='sidebar-link' href='landing.html' target='_blank'>
+              <i class="align-middle" data-lucide="map-pin"></i> <span class="align-middle">Locations</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-up"></i> <span class="align-middle">Import</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-down"></i> <span class="align-middle">Export</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Settings & Privacy
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="user-cog"></i> <span class="align-middle">Profile Settings</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="bell-plus"></i> <span class="align-middle">Web Notifications</span>
+            </a>
+					</li>
+			
+				</ul>
+
+				<div class="sidebar-cta">
+					<div class="sidebar-cta-content">
+						<strong class="d-inline-block mb-2">Monthly Report</strong>
+						<div class="mb-3 text-sm">
+							Your monthly report is ready for download!
+						</div>
+
+						<div class="d-grid">
+							<a href="#" class="btn btn-primary" target="_blank">Download</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-bg">
+				<a class="sidebar-toggle">
+          <i class="hamburger align-self-center"></i>
+        </a>
+
+				<form class="d-none d-sm-inline-block">
+					<div class="input-group input-group-navbar">
+						<input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+						<button class="btn" type="button">
+              <i class="align-middle" data-lucide="search"></i>
+            </button>
+					</div>
+				</form>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle text-body" data-lucide="message-circle"></i>
+									<span class="indicator">1</span>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
+								<div class="dropdown-menu-header">
+									<div class="position-relative">
+										1 New Message
+									</div>
+								</div>
+								<div class="list-group">
+									
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<img src="../assets/img/avatars/admin.jpg" class="img-fluid rounded-circle" alt="Fr. Raymond" width="40" height="40">
+											</div>
+											<div class="col-10 ps-2">
+												<div>Fr. Raymond</div>
+												<div class="text-muted small mt-1">Peace be upon you. Please share the mass schedule with Fr. Thadeus</div>
+												<div class="text-muted small mt-1">15m ago</div>
+											</div>
+										</div>
+									</a>
+
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="../communications/messages.html" class="text-muted">Show all messages</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle text-body" data-lucide="bell-off"></i>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+								<div class="dropdown-menu-header">
+									0 New Notifications
+								</div>
+								<div class="list-group">
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-danger" data-lucide="alert-circle"></i>
+											</div>
+											<div class="col-10">
+												<div>Example Notification</div>
+												<div class="text-muted small mt-1">Fr Ray exported users back-up file</div>
+												<div class="text-muted small mt-1">2h ago</div>
+											</div>
+										</div>
+									</a>
+									
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Show all notifications</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item nav-theme-toggle dropdown">
+							<a class="nav-icon js-theme-toggle" href="#">
+								<div class="position-relative">
+									<i class="align-middle text-body nav-theme-toggle-light" data-lucide="sun"></i>
+									<i class="align-middle text-body nav-theme-toggle-dark" data-lucide="moon"></i>
+								</div>
+							</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                <i class="align-middle" data-lucide="settings"></i>
+              </a>
+
+							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                <img src="../assets/img/avatars/admin.jpg" class="img-fluid rounded-circle me-1 mt-n2 mb-n2" alt="Chris Wood" width="40" height="40"/> <span>Hillary Raduk</span>
+              </a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class='dropdown-item' href='pages-profile.html'><i class="align-middle me-1" data-lucide="user"></i> Profile</a>
+								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-lucide="pie-chart"></i> Analytics</a>
+								<div class="dropdown-divider"></div>
+								<a class='dropdown-item' href='pages-settings.html'>Settings & Privacy</a>
+								<a class="dropdown-item" href="#">Help</a>
+								<a class="dropdown-item" href="#">Sign out</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">File Manager</h1>
+
+					<div class="row">
+						<div class="col-sm-5 col-xl-3">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-grid mb-3">
+										<button class="btn btn-primary btn-lg" id="uploadButton">
+										  <i class="bi bi-upload"></i> Upload Files
+										</button>
+									  </div>
+									
+									  <input type="file" id="fileInput" multiple style="display: none;">
+
+									<ul class="list-group list-group-flush mb-3">
+										<li class="list-group-item px-2">
+											<a href="#" class="text-reset">
+                                                <i data-lucide="upload" class="me-2"></i>My Files
+                                            </a>
+										</li>
+										<li class="list-group-item px-2">
+											<a href="#" class="text-reset">
+                                                <i data-lucide="folder" class="me-2"></i>My Drive
+                                            </a>
+										</li>
+										<li class="list-group-item px-2">
+											<a href="#" class="text-reset">
+                                                <i data-lucide="Computer" class="me-2"></i>Computer
+                                            </a>
+										</li>
+										<li class="list-group-item px-2">
+											<a href="#" class="text-reset">
+                                                <i data-lucide="share" class="me-2"></i>Shared with me
+                                            </a>
+										</li>
+										<li class="list-group-item px-2">
+											<a href="#" class="text-reset">
+                                                <i data-lucide="clock" class="me-2"></i>Recent
+                                            </a>
+										</li>
+										<li class="list-group-item px-2">
+											<a href="#" class="text-reset">
+                                                <i data-lucide="star" class="me-2"></i>Starred
+                                            </a>
+										</li>
+									</ul>
+									<ul class="list-group list-group-flush mb-5">
+										<li class="list-group-item px-2">
+											<a href="#" class="text-reset">
+                                                <i data-lucide="inbox" class="me-2"></i>Spam
+                                            </a>
+										</li>
+										<li class="list-group-item px-2">
+											<a href="#" class="text-reset">
+                                                <i data-lucide="archive" class="me-2"></i>Archive
+                                            </a>
+										</li>
+										<li class="list-group-item px-2">
+											<a href="#" class="text-reset">
+                                                <i data-lucide="trash" class="me-2"></i>Bin
+                                            </a>
+										</li>
+										<li class="list-group-item px-2">
+											<a href="#" class="text-reset">
+                                                <i data-lucide="database" class="me-2"></i>Storage
+                                            </a>
+										</li>
+									</ul>
+
+									<h6 class="text-uppercase">Storage</h6>
+									<div class="progress progress-sm mb-2">
+										<div class="progress-bar progress-lg bg-danger" role="progressbar" style="width: 73%" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<p class="text-muted font-12 mb-0">72.6 GB (73%) of 100 GB used</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-7 col-xl-9">
+							<div class="card">
+								<div class="card-header pb-0">
+									<div class="float-end fs-5 mt-2">
+										<div class="dropdown position-relative">
+											<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="outline-0 text-reset">
+                                                <i class="align-middle" data-lucide="more-horizontal"></i>
+                                            </a>
+
+											<div class="dropdown-menu dropdown-menu-end">
+												<a class="dropdown-item" href="#">Share</a>
+												<a class="dropdown-item" href="#">Organise</a>
+												<a class="dropdown-item" href="#">Details</a>
+											</div>
+										</div>
+									</div>
+									<h5 class="card-title mt-2">
+										My Files
+									</h5>
+								</div>
+								<div class="card-body pb-0">
+									<div class="row">
+										<div class="col-6 col-xxl-3">
+											<div class="card shadow-none border">
+												<div class="card-body p-3">
+													<div class="float-end">
+														<div class="dropdown position-relative">
+															<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="outline-0 text-reset">
+                                                                <i class="align-middle" data-lucide="more-horizontal"></i>
+                                                            </a>
+
+															<div class="dropdown-menu dropdown-menu-end">
+																<a class="dropdown-item" href="#">Open</a>
+																<a class="dropdown-item" href="#">Edit</a>
+																<a class="dropdown-item" href="#">Delete</a>
+															</div>
+														</div>
+													</div>
+													<i class="align-middle fs-1 mb-3 text-warning" data-lucide="files"></i>
+													<div class="d-flex w-100">
+														<div class="overflow-hidden me-auto">
+															<h5 class="mb-1">
+																<a href="#" class="text-body text-truncate">Reports</a>
+															</h5>
+															<p class="text-muted mb-0 text-truncate">12 Files</p>
+														</div>
+														<div class="align-self-end ms-2">
+															<p class="text-muted mb-0">8GB</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 col-xxl-3">
+											<div class="card shadow-none border">
+												<div class="card-body p-3">
+													<div class="float-end">
+														<div class="dropdown position-relative">
+															<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="outline-0 text-reset">
+                                                                <i class="align-middle" data-lucide="more-horizontal"></i>
+                                                            </a>
+
+															<div class="dropdown-menu dropdown-menu-end">
+																<a class="dropdown-item" href="#">Open</a>
+																<a class="dropdown-item" href="#">Edit</a>
+																<a class="dropdown-item" href="#">Delete</a>
+															</div>
+														</div>
+													</div>
+													<i class="align-middle fs-1 mb-3 text-success" data-lucide="circle-dollar-sign"></i>
+													<div class="d-flex w-100">
+														<div class="overflow-hidden me-auto">
+															<h5 class="mb-1">
+																<a href="#" class="text-body text-truncate">Finance</a>
+															</h5>
+															<p class="text-muted mb-0 text-truncate">108 Files</p>
+														</div>
+														<div class="align-self-end ms-2">
+															<p class="text-muted mb-0">12GB</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 col-xxl-3">
+											<div class="card shadow-none border">
+												<div class="card-body p-3">
+													<div class="float-end">
+														<div class="dropdown position-relative">
+															<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="outline-0 text-reset">
+                                                                <i class="align-middle" data-lucide="more-horizontal"></i>
+                                                            </a>
+
+															<div class="dropdown-menu dropdown-menu-end">
+																<a class="dropdown-item" href="#">Open</a>
+																<a class="dropdown-item" href="#">Edit</a>
+																<a class="dropdown-item" href="#">Delete</a>
+															</div>
+														</div>
+													</div>
+													<i class="align-middle fs-1 mb-3 text-primary" data-lucide="hand-helping"></i>
+													<div class="d-flex w-100">
+														<div class="overflow-hidden me-auto">
+															<h5 class="mb-1">
+																<a href="#" class="text-body text-truncate">Requests</a>
+															</h5>
+															<p class="text-muted mb-0 text-truncate">34 Files</p>
+														</div>
+														<div class="align-self-end ms-2">
+															<p class="text-muted mb-0">2GB</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 col-xxl-3">
+											<div class="card shadow-none border">
+												<div class="card-body p-3">
+													<div class="float-end">
+														<div class="dropdown position-relative">
+															<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="outline-0 text-reset">
+                                                                <i class="align-middle" data-lucide="more-horizontal"></i>
+                                                            </a>
+
+															<div class="dropdown-menu dropdown-menu-end">
+																<a class="dropdown-item" href="#">Open</a>
+																<a class="dropdown-item" href="#">Edit</a>
+																<a class="dropdown-item" href="#">Delete</a>
+															</div>
+														</div>
+													</div>
+													<i class="align-middle fs-1 mb-3 text-danger" data-lucide="book-user"></i>
+													<div class="d-flex w-100">
+														<div class="overflow-hidden me-auto">
+															<h5 class="mb-1">
+																<a href="#" class="text-body text-truncate">User Data</a>
+															</h5>
+															<p class="text-muted mb-0 text-truncate">8 Files</p>
+														</div>
+														<div class="align-self-end ms-2">
+															<p class="text-muted mb-0">26GB</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 col-xxl-3">
+											<div class="card shadow-none border">
+												<div class="card-body p-3">
+													<div class="float-end">
+														<div class="dropdown position-relative">
+															<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="outline-0 text-reset">
+                                                                <i class="align-middle" data-lucide="more-horizontal"></i>
+                                                            </a>
+
+															<div class="dropdown-menu dropdown-menu-end">
+																<a class="dropdown-item" href="#">Open</a>
+																<a class="dropdown-item" href="#">Edit</a>
+																<a class="dropdown-item" href="#">Delete</a>
+															</div>
+														</div>
+													</div>
+													<i class="align-middle fs-1 mb-3 text-info" data-lucide="scroll-text"></i>
+													<div class="d-flex w-100">
+														<div class="overflow-hidden me-auto">
+															<h5 class="mb-1">
+																<a href="#" class="text-body text-truncate">Documents</a>
+															</h5>
+															<p class="text-muted mb-0 text-truncate">50 Files</p>
+														</div>
+														<div class="align-self-end ms-2">
+															<p class="text-muted mb-0">9GB</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 col-xxl-3">
+											<div class="card shadow-none border">
+												<div class="card-body p-3">
+													<div class="float-end">
+														<div class="dropdown position-relative">
+															<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="outline-0 text-reset">
+                                                                <i class="align-middle" data-lucide="more-horizontal"></i>
+                                                            </a>
+
+															<div class="dropdown-menu dropdown-menu-end">
+																<a class="dropdown-item" href="#">Open</a>
+																<a class="dropdown-item" href="#">Edit</a>
+																<a class="dropdown-item" href="#">Delete</a>
+															</div>
+														</div>
+													</div>
+													<i class="align-middle fs-1 mb-3 text-primary" data-lucide="library-big"></i>
+													<div class="d-flex w-100">
+														<div class="overflow-hidden me-auto">
+															<h5 class="mb-1">
+																<a href="#" class="text-body text-truncate">Resources</a>
+															</h5>
+															<p class="text-muted mb-0 text-truncate">40 Files</p>
+														</div>
+														<div class="align-self-end ms-2">
+															<p class="text-muted mb-0">2GB</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 col-xxl-3">
+											<div class="card shadow-none border">
+												<div class="card-body p-3">
+													<div class="float-end">
+														<div class="dropdown position-relative">
+															<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="outline-0 text-reset">
+                                                                <i class="align-middle" data-lucide="more-horizontal"></i>
+                                                            </a>
+
+															<div class="dropdown-menu dropdown-menu-end">
+																<a class="dropdown-item" href="#">Open</a>
+																<a class="dropdown-item" href="#">Edit</a>
+																<a class="dropdown-item" href="#">Delete</a>
+															</div>
+														</div>
+													</div>
+													<i class="align-middle fs-1 mb-3 text-success" data-lucide="navigation"></i>
+													<div class="d-flex w-100">
+														<div class="overflow-hidden me-auto">
+															<h5 class="mb-1">
+																<a href="#" class="text-body text-truncate">Travel</a>
+															</h5>
+															<p class="text-muted mb-0 text-truncate">60 Files</p>
+														</div>
+														<div class="align-self-end ms-2">
+															<p class="text-muted mb-0">5GB</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 col-xxl-3">
+											<div class="card shadow-none border">
+												<div class="card-body p-3">
+													<div class="float-end">
+														<div class="dropdown position-relative">
+															<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="outline-0 text-reset">
+                                                                <i class="align-middle" data-lucide="more-horizontal"></i>
+                                                            </a>
+
+															<div class="dropdown-menu dropdown-menu-end">
+																<a class="dropdown-item" href="#">Open</a>
+																<a class="dropdown-item" href="#">Edit</a>
+																<a class="dropdown-item" href="#">Delete</a>
+															</div>
+														</div>
+													</div>
+													<i class="align-middle fs-1 mb-3 text-secondary" data-lucide="archive"></i>
+													<div class="d-flex w-100">
+														<div class="overflow-hidden me-auto">
+															<h5 class="mb-1">
+																<a href="#" class="text-body text-truncate">Backups</a>
+															</h5>
+															<p class="text-muted mb-0 text-truncate">320 Files</p>
+														</div>
+														<div class="align-self-end ms-2">
+															<p class="text-muted mb-0">16GB</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-header pb-0">
+									<div class="row">
+										<div class="col-md-7">
+											<h5 class="card-title mt-2">
+												Recent Files
+											</h5>
+										</div>
+										<div class="col-md-5 mb-md-0">
+											<div class="input-group input-group-search">
+												<input type="text" class="form-control" placeholder="Search files…">
+												<button class="btn" type="button">
+                                                    <i class="align-middle" data-lucide="search"></i>
+                                                </button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<table class="table">
+										<thead>
+											<tr>
+												<th class="w-50">Name</th>
+												<th>Date Modified</th>
+												<th>Size</th>
+												<th class="text-end">Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td> <a href="#" class="text-reset"> <i data-lucide="file-code" class="me-2"></i>app.js </a> </td>
+												<td>April 15, 2024</td>
+												<td>25 KB</td>
+												<td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+											</tr>
+											<tr>
+												<td> <a href="#" class="text-reset"> <i data-lucide="file-json" class="me-2"></i>styles.css </a> </td>
+												<td>February 28, 2024</td>
+												<td>12 KB</td>
+												<td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+											</tr>
+											<tr>
+												<td> <a href="#" class="text-reset"> <i data-lucide="file-spreadsheet" class="me-2"></i>data.xlsx </a> </td>
+												<td>March 12, 2024</td>
+												<td>1 MB</td>
+												<td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+											</tr>
+											<tr>
+												<td> <a href="#" class="text-reset"> <i data-lucide="file-audio" class="me-2"></i>audio.mp3 </a> </td>
+												<td>May 1, 2024</td>
+												<td>3 MB</td>
+												<td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+											</tr>
+											<tr>
+												<td> <a href="#" class="text-reset"> <i data-lucide="file-video" class="me-2"></i>video.mp4 </a> </td>
+												<td>December 18, 2023</td>
+												<td>50 MB</td>
+												<td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+											</tr>
+											<tr>
+												<td> <a href="#" class="text-reset"> <i data-lucide="file" class="me-2"></i>report.pdf </a> </td>
+												<td>November 20, 2023</td>
+												<td>5 MB</td>
+												<td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+											</tr>
+											<tr>
+												<td> <a href="#" class="text-reset"> <i data-lucide="file" class="me-2"></i>presentation.pptx </a> </td>
+												<td>September 3, 2023</td>
+												<td>10 MB</td>
+												<td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+											</tr>
+											<tr>
+												<td> <a href="#" class="text-reset"> <i data-lucide="file-text" class="me-2"></i>index.html </a> </td>
+												<td>August 8, 2023</td>
+												<td>9 KB</td>
+												<td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal fade" id="progressModal" tabindex="-1" aria-labelledby="progressModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="progressModalLabel">Uploading Files</h5>
+          							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<div id="progressContainer" class="mb-3">
+										<div class="progress">
+											<div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+										</div>
+										<p id="fileName" class="mt-2">No file selected</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+    
+
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Support</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Help Center</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Privacy</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Terms of Service</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-6 text-end">
+							<p class="mb-0">
+								&copy; 2024 - <a class='text-muted' href='https://kenyafriars.org/'>Conventual Franciscan Friars</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="../assets/js/app.js"></script>
+
+	<script>
+		document.getElementById('uploadButton').addEventListener('click', function() {
+		  document.getElementById('fileInput').click(); 
+		});
+	  
+		document.getElementById('fileInput').addEventListener('change', function(event) {
+		  const file = event.target.files[0];
+		  if (file) {
+			console.log('Selected file:', file.name);
+		
+		  }
+		});
+	  </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+	document.getElementById('uploadButton').addEventListener('click', function() {
+	  document.getElementById('fileInput').click();
+	});
+  
+	document.getElementById('fileInput').addEventListener('change', function(event) {
+	  const files = event.target.files;
+	  if (files.length > 0) {
+		// Show the progress modal
+		const progressModalElement = document.getElementById('progressModal');
+		const progressModal = new bootstrap.Modal(progressModalElement);
+		progressModal.show();
+  
+		// Prepare progress bar
+		const progressBar = document.getElementById('progressBar');
+		const fileNameElement = document.getElementById('fileName');
+		
+		fileNameElement.textContent = 'Uploading ' + files.length + ' file(s)...';
+		let uploadedFilesCount = 0;
+		const totalFiles = files.length;
+  
+		// Function to update progress bar
+		function updateProgressBar(percentage) {
+		  progressBar.style.width = percentage + '%';
+		  progressBar.setAttribute('aria-valuenow', percentage);
+		  progressBar.textContent = percentage + '%';
+		}
+  
+		// Simulate file upload progress for each file
+		Array.from(files).forEach((file, index) => {
+		  simulateFileUpload(file, index, totalFiles);
+		});
+  
+		function simulateFileUpload(file, fileIndex, totalFiles) {
+		  const uploadTime = 2000 + Math.random() * 3000; // Random upload time between 2s to 5s
+  
+		  setTimeout(() => {
+			uploadedFilesCount++;
+			const percentage = Math.round((uploadedFilesCount / totalFiles) * 100);
+			updateProgressBar(percentage);
+  
+			if (uploadedFilesCount === totalFiles) {
+			  setTimeout(() => {
+				progressModal.hide();
+				fileNameElement.textContent = 'Upload complete!';
+			  }, 500); // Show the complete message for a moment before closing
+			}
+		  }, uploadTime);
+		}
+	  }
+	});
+  </script>
+	
+</body>
+
+
+</html>

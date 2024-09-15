@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark" data-layout="fluid" data-sidebar-theme="dark" data-sidebar-position="left" data-sidebar-behavior="sticky">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Mass Intentions Admin Dashboard">
+	<meta name="author" content="Ubuni Creatives">
+
+	<title>Mass Intentions Admin Dashboard | Conventual Franciscan Friars </title>
+
+	<link rel="canonical" href="../administration/dashboard.html" />
+	<link rel="shortcut icon" href="#">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+	<link href="../assets/css/app.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class='sidebar-brand' href='../administration/dashboard.html'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="794" height="247">
+                        <rect width="100%" height="100%" fill="white"/>
+                        <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAxoAAAD3CAYAAACaciKTAAAAAXNSR0IArs4c6QAAD4tJREFUeF7t1zERAAAIAzHq3zQmfgwCOuRYfucIECBAgAABAgQIECAQCyzeM0eAAAECBAgQIECAAIETGp6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXEBo5KQGCRAgQIAAAQIECBAQGn6AAAECBAgQIECAAIFcQGjkpAYJECBAgAABAgQIEBAafoAAAQIECBAgQIAAgVxAaOSkBgkQIECAAAECBAgQEBp+gAABAgQIECBAgACBXOABE0oA+JGYhyUAAAAASUVORK5CYII=" x="0" y="0" width="794" height="247"/>
+                    </svg>
+    
+          <span class="align-middle me-3">Kenya Friars</span>
+        </a>
+
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Administration
+					</li>
+
+					<li class="sidebar-item">
+						<a  class="sidebar-link" href="../administration/dashboard.html">
+							<i class="align-middle" data-lucide="panels-top-left"></i> <span class="align-middle">Dashboard</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a  class="sidebar-link" href="../administration/analytics.html">
+							<i class="align-middle" data-lucide="atom"></i> <span class="align-middle">Analytics</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="../administration/users.html">
+							<i class="align-middle" data-lucide="user"></i> <span class="align-middle">Users</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="../administration/users.html">
+							<i class="align-middle" data-lucide="file"></i> <span class="align-middle">File Manager</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-header">
+						Mass Intentions
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed" href="../mass-intentions/requests.html">
+              <i class="align-middle" data-lucide="hand-helping"></i> <span class="align-middle">Requests</span>
+			  <span class="badge badge-sidebar-primary">6</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed" href="../mass-intentions/calender.html">
+              <i class="align-middle" data-lucide="calendar-days"></i> <span class="align-middle">Calender</span>
+            </a>
+					</li>
+				
+					<li class="sidebar-item active">
+						<a class="sidebar-link collapsed" href="../mass-intentions/tasks.html">
+              <i class="align-middle" data-lucide="trello"></i> <span class="align-middle">Tasks</span>
+			  <span class="badge badge-sidebar-primary">New</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Communications
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="../communications/email-inbox.html">
+							<i class="align-middle" data-lucide="mail"></i> <span class="align-middle">Email</span>
+							<span class="badge badge-sidebar-primary">New</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class='sidebar-link' href='../communications/messages.html'>
+              <i class="align-middle" data-lucide="message-square"></i> <span class="align-middle">Messages</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class='sidebar-link' href='../communications/notifications.html'>
+              <i class="align-middle" data-lucide="bell"></i> <span class="align-middle">Notifications</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Tools
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-stack"></i> <span class="align-middle">Reports</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="users"></i> <span class="align-middle">User Logs</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class='sidebar-link' href='landing.html' target='_blank'>
+              <i class="align-middle" data-lucide="map-pin"></i> <span class="align-middle">Locations</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-up"></i> <span class="align-middle">Import</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="file-down"></i> <span class="align-middle">Export</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Settings & Privacy
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="user-cog"></i> <span class="align-middle">Profile Settings</span>
+            </a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link collapsed">
+              <i class="align-middle" data-lucide="bell-plus"></i> <span class="align-middle">Web Notifications</span>
+            </a>
+					</li>
+			
+				</ul>
+
+				<div class="sidebar-cta">
+					<div class="sidebar-cta-content">
+						<strong class="d-inline-block mb-2">Monthly Report</strong>
+						<div class="mb-3 text-sm">
+							Your monthly report is ready for download!
+						</div>
+
+						<div class="d-grid">
+							<a href="#" class="btn btn-primary" target="_blank">Download</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-bg">
+				<a class="sidebar-toggle">
+          <i class="hamburger align-self-center"></i>
+        </a>
+
+				<form class="d-none d-sm-inline-block">
+					<div class="input-group input-group-navbar">
+						<input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+						<button class="btn" type="button">
+              <i class="align-middle" data-lucide="search"></i>
+            </button>
+					</div>
+				</form>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle text-body" data-lucide="message-circle"></i>
+									<span class="indicator">1</span>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
+								<div class="dropdown-menu-header">
+									<div class="position-relative">
+										1 New Message
+									</div>
+								</div>
+								<div class="list-group">
+									
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<img src="../assets/img/avatars/admin.jpg" class="img-fluid rounded-circle" alt="Fr. Raymond" width="40" height="40">
+											</div>
+											<div class="col-10 ps-2">
+												<div>Fr. Raymond</div>
+												<div class="text-muted small mt-1">Peace be upon you. Please share the mass schedule with Fr. Thadeus</div>
+												<div class="text-muted small mt-1">15m ago</div>
+											</div>
+										</div>
+									</a>
+
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="../communications/messages.html" class="text-muted">Show all messages</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle text-body" data-lucide="bell-off"></i>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+								<div class="dropdown-menu-header">
+									0 New Notifications
+								</div>
+								<div class="list-group">
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-danger" data-lucide="alert-circle"></i>
+											</div>
+											<div class="col-10">
+												<div>Example Notification</div>
+												<div class="text-muted small mt-1">Fr Ray exported users back-up file</div>
+												<div class="text-muted small mt-1">2h ago</div>
+											</div>
+										</div>
+									</a>
+									
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Show all notifications</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item nav-theme-toggle dropdown">
+							<a class="nav-icon js-theme-toggle" href="#">
+								<div class="position-relative">
+									<i class="align-middle text-body nav-theme-toggle-light" data-lucide="sun"></i>
+									<i class="align-middle text-body nav-theme-toggle-dark" data-lucide="moon"></i>
+								</div>
+							</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                                <i class="align-middle" data-lucide="settings"></i>
+                            </a>
+
+							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                                <img src="../assets/img/avatars/admin.jpg" class="img-fluid rounded-circle me-1 mt-n2 mb-n2" alt="Chris Wood" width="40" height="40"/> <span>Hillary Raduk</span>
+                            </a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class='dropdown-item' href='pages-profile.html'><i class="align-middle me-1" data-lucide="user"></i> Profile</a>
+								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-lucide="pie-chart"></i> Analytics</a>
+								<div class="dropdown-divider"></div>
+								<a class='dropdown-item' href='pages-settings.html'>Settings & Privacy</a>
+								<a class="dropdown-item" href="#">Help</a>
+								<a class="dropdown-item" href="#">Sign out</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">Task List</h1>
+
+					<div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h2 class="card-title">Upcoming Mass Intentions</h2>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-sm-end">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#taskModal"><i data-lucide="plus"></i> New Task</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table w-100">
+                                <thead>
+                                    <tr>
+                                        <th class="align-middle w-25px">
+                                            <div class="form-check fs-4"> <input class="form-check-input tasks-check-all" type="checkbox" id="tasks-check-all"> <label class="form-check-label" for="tasks-check-all"></label> </div>
+                                        </th>
+                                        <th class="align-middle w-50">Name</th>
+                                        <th class="align-middle d-none d-xl-table-cell">Assigned To</th>
+                                        <th class="align-middle d-none d-xxl-table-cell">Date</th>
+                                        <th class="align-middle">Priority</th>
+                                        <th class="align-middle text-end">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check fs-4"> <input class="form-check-input" type="checkbox"> <label class="form-check-label"></label> </div>
+                                        </td>
+                                        <td><strong>Intentions for the Parish Community</strong></td>
+                                        <td class="d-none d-xl-table-cell">
+                                            <img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Fr. John Smith" width="32" height="32"> Fr. John Smith
+                                        </td>
+                                        <td class="d-none d-xxl-table-cell">October 15, 2024</td>
+                                        <td><span class="badge badge-subtle-warning">Medium</span></td>
+                                        <td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check fs-4"> <input class="form-check-input" type="checkbox"> <label class="form-check-label"></label> </div>
+                                        </td>
+                                        <td><strong>Special Mass for Healing</strong></td>
+                                        <td class="d-none d-xl-table-cell">
+                                            <img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Fr. Michael Johnson" width="32" height="32"> Fr. Michael Johnson
+                                        </td>
+                                        <td class="d-none d-xxl-table-cell">October 20, 2024</td>
+                                        <td><span class="badge badge-subtle-danger">High</span></td>
+                                        <td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check fs-4"> <input class="form-check-input" type="checkbox"> <label class="form-check-label"></label> </div>
+                                        </td>
+                                        <td><strong>Commemoration of the Faithful Departed</strong></td>
+                                        <td class="d-none d-xl-table-cell">
+                                            <img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Fr. Thomas Green" width="32" height="32"> Fr. Thomas Green
+                                        </td>
+                                        <td class="d-none d-xxl-table-cell">October 25, 2024</td>
+                                        <td><span class="badge badge-subtle-success">Low</span></td>
+                                        <td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+
+					<div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h2 class="card-title">In Progress Mass Intentions</h2>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-sm-end">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#taskModal"><i data-lucide="plus"></i> New Task</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table w-100">
+                                <thead>
+                                    <tr>
+                                        <th class="align-middle w-25px">
+                                            <div class="form-check fs-4"> <input class="form-check-input tasks-check-all" type="checkbox" id="tasks-check-all"> <label class="form-check-label" for="tasks-check-all"></label> </div>
+                                        </th>
+                                        <th class="align-middle w-50">Name</th>
+                                        <th class="align-middle d-none d-xl-table-cell">Assigned To</th>
+                                        <th class="align-middle d-none d-xxl-table-cell">Date</th>
+                                        <th class="align-middle">Priority</th>
+                                        <th class="align-middle text-end">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check fs-4"> <input class="form-check-input" type="checkbox"> <label class="form-check-label"></label> </div>
+                                        </td>
+                                        <td><strong>Mass for the Sick and Elderly</strong></td>
+                                        <td class="d-none d-xl-table-cell">
+                                            <img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Fr. James Walker" width="32" height="32"> Fr. James Walker
+                                        </td>
+                                        <td class="d-none d-xxl-table-cell">September 10, 2024</td>
+                                        <td><span class="badge badge-subtle-success">Low</span></td>
+                                        <td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check fs-4"> <input class="form-check-input" type="checkbox"> <label class="form-check-label"></label> </div>
+                                        </td>
+                                        <td><strong>Confirmation Mass for Youth</strong></td>
+                                        <td class="d-none d-xl-table-cell">
+                                            <img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Fr. Robert Lee" width="32" height="32"> Fr. Robert Lee
+                                        </td>
+                                        <td class="d-none d-xxl-table-cell">September 15, 2024</td>
+                                        <td><span class="badge badge-subtle-danger">High</span></td>
+                                        <td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check fs-4"> <input class="form-check-input" type="checkbox"> <label class="form-check-label"></label> </div>
+                                        </td>
+                                        <td><strong>Anniversary Mass for Deceased Members</strong></td>
+                                        <td class="d-none d-xl-table-cell">
+                                            <img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Fr. Peter Harris" width="32" height="32"> Fr. Peter Harris
+                                        </td>
+                                        <td class="d-none d-xxl-table-cell">September 25, 2024</td>
+                                        <td><span class="badge badge-subtle-success">Low</span></td>
+                                        <td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+
+					<div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h2 class="card-title">Completed Mass Intentions</h2>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-sm-end">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#taskModal"><i data-lucide="plus"></i> New Task</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-responsive w-100">
+                                <thead>
+                                    <tr>
+                                        <th class="align-middle w-25px">
+                                            <div class="form-check fs-4"> <input class="form-check-input tasks-check-all" type="checkbox" id="tasks-check-all"> <label class="form-check-label" for="tasks-check-all"></label> </div>
+                                        </th>
+                                        <th class="align-middle w-50">Name</th>
+                                        <th class="align-middle d-none d-xl-table-cell">Assigned To</th>
+                                        <th class="align-middle d-none d-xxl-table-cell">Date</th>
+                                        <th class="align-middle">Priority</th>
+                                        <th class="align-middle text-end">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check fs-4"> <input class="form-check-input" type="checkbox"> <label class="form-check-label"></label> </div>
+                                        </td>
+                                        <td><strong>Mass for the Anniversary of the Parish</strong></td>
+                                        <td class="d-none d-xl-table-cell">
+                                            <img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Fr. Michael Anderson" width="32" height="32"> Fr. Michael Anderson
+                                        </td>
+                                        <td class="d-none d-xxl-table-cell">August 5, 2024</td>
+                                        <td><span class="badge badge-subtle-success">Low</span></td>
+                                        <td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check fs-4"> <input class="form-check-input" type="checkbox"> <label class="form-check-label"></label> </div>
+                                        </td>
+                                        <td><strong>Mass for the Feast of the Patron Saint</strong></td>
+                                        <td class="d-none d-xl-table-cell">
+                                            <img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Fr. Daniel Murphy" width="32" height="32"> Fr. Daniel Murphy
+                                        </td>
+                                        <td class="d-none d-xxl-table-cell">August 15, 2024</td>
+                                        <td><span class="badge badge-subtle-warning">Medium</span></td>
+                                        <td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check fs-4"> <input class="form-check-input" type="checkbox"> <label class="form-check-label"></label> </div>
+                                        </td>
+                                        <td><strong>Requiem Mass for Departed Clergy</strong></td>
+                                        <td class="d-none d-xl-table-cell">
+                                            <img src="../assets/img/avatars/admin.jpg" class="rounded-circle me-1" alt="Fr. Andrew Collins" width="32" height="32"> Fr. Andrew Collins
+                                        </td>
+                                        <td class="d-none d-xxl-table-cell">July 30, 2024</td>
+                                        <td><span class="badge badge-subtle-success">Low</span></td>
+                                        <td class="text-end"> <button type="button" class="btn btn-light">View</button> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>                    
+
+					<div class="modal fade" id="taskModal" tabindex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">Add task</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body mx-3">
+									<div class="mb-3">
+										<label class="form-label">Name</label>
+										<input type="text" class="form-control" placeholder="Name">
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Assigned To</label>
+										<select class="form-select">
+                                            <option value="1" selected>Fr. John Smith</option>
+                                            <option value="2"> Fr. Michael Johnson</option>
+                                            <option value="3">Fr. Hillary Raduk</option>
+                                            <option value="4">Fr. Thomas Green</option>
+                                        </select>
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Priority</label>
+										<select class="form-select">
+                                            <option value="low" selected>Low</option>
+                                            <option value="medium">Medium</option>
+                                            <option value="high">High</option>
+                                        </select>
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Description</label>
+										<div id="quill-editor"></div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+									<button class="btn btn-primary" data-bs-dismiss="modal"><i data-lucide="save"></i> Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Support</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Help Center</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Privacy</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Terms of Service</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-6 text-end">
+							<p class="mb-0">
+								&copy; 2024 - <a class='text-muted' href='https://kenyafriars.org/'>Conventual Franciscan Friars</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="../assets/js/app.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			$(".tasks-check-all").click(function() {
+				if ($(this).prop("checked")) {
+					$(this).closest('.table').find("input[type='checkbox']").prop("checked", true);
+				} else {
+					$(this).closest('.table').find("input[type='checkbox']").prop("checked", false);
+				}
+			});
+		});
+	</script>
+
+	<script>
+		
+		var isQuillInitialized = false;
+		document.addEventListener("DOMContentLoaded", function() {
+			if (isQuillInitialized) {
+				return;
+			}
+			isQuillInitialized = true;
+			var editor = new Quill("#quill-editor", {
+				placeholder: "Message",
+				theme: "snow"
+			});
+		});
+	</script>
+
+</body>
+
+
+</html>
